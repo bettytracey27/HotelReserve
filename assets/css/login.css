@@ -1,0 +1,120 @@
+/* Simplified Ethiopian Auth CSS */
+:root {
+  --ethio-green: #078735;       /* Ethiopian green */
+  --ethio-yellow: #fcd116;      /* Ethiopian yellow */
+  --ethio-light: #f8f5e6;       /* Parchment background */
+  --ethio-dark: #2a2118;        /* Dark text */
+}
+
+/* Base Styles */
+.login-page, 
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--ethio-light);
+  padding: 2rem;
+}
+
+.auth-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 3rem;
+}
+
+.auth-form h2 {
+  color: var(--ethio-green);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.auth-form h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--ethio-yellow);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--ethio-dark);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--ethio-green);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(7, 135, 53, 0.1);
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--ethio-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover {
+  background-color: #056a2a;
+  transform: translateY(-2px);
+}
+
+/* Links */
+.auth-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.auth-links a {
+  color: var(--ethio-green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: var(--ethio-yellow);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 2rem 1.5rem;
+  }
+}
